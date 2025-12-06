@@ -3,44 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Helldivers II oyun detayları, sistem gereksinimleri ve fragman.">
-  <meta name="keywords" content="oyun, tanıtım, inceleme, fragman, sistem gereksinimleri">
-  <title>Helldivers II</title>
+  <meta name="description" content="Helldivers II detaylı inceleme, sistem gereksinimleri ve fragman.">
+  <meta name="keywords" content="oyun, tanıtım, inceleme, fragman, sistem gereksinimleri, Helldivers 2">
+  <title>Helldivers II | OyunTanıtım</title>
 
-  <!-- CSS -->
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="shortcut icon"/>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/slicknav.min.css"/>
+  <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+  <link rel="stylesheet" href="css/magnific-popup.css"/>
+  <link rel="stylesheet" href="css/animate.css"/>
   <link rel="stylesheet" href="css/style.css"/>
 
   <style>
-    /* Sayfaya özel minik stiller (istersen style.css'e taşıyabilirsin) */
-    .info-badges span{display:inline-block;margin:4px 6px;padding:6px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;font-size:12px;color:#ddd}
+    .info-badges span{
+      display:inline-block;
+      margin:4px 6px;
+      padding:6px 10px;
+      border:1px solid rgba(255,255,255,.2);
+      border-radius:999px;
+      font-size:12px;
+      color:#ddd;
+    }
     .btn-row{gap:10px}
     .shadow-hero{box-shadow:0 10px 30px rgba(0,0,0,.35)}
 
-    /* Platform buton renkleri + disabled hali */
     .site-btn.steam-btn{background:#171a21}
     .site-btn.xbox-btn{background:#107c10}
     .site-btn.ps-btn{background:#003791}
     .site-btn.epic-btn{background:#202020}
-    .site-btn[aria-disabled="true"]{opacity:.55;pointer-events:none;cursor:not-allowed}
+    .site-btn[aria-disabled="true"]{
+      opacity:.55;
+      pointer-events:none;
+      cursor:not-allowed;
+    }
 
-    /* Küçük uyarı rozeti */
-    .badge-unavail{display:inline-block;font-size:.75rem;padding:.2rem .5rem;background:#6c757d;border-radius:.35rem;margin-left:.5rem}
+    .badge-unavail{
+      display:inline-block;
+      font-size:.75rem;
+      padding:.2rem .5rem;
+      background:#6c757d;
+      border-radius:.35rem;
+      margin-left:.5rem;
+    }
+
+    .requirements-box{
+      background:rgba(0,0,0,.25);
+      border-radius:12px;
+      padding:15px 18px;
+      margin-bottom:20px;
+    }
+    .requirements-box h5{
+      margin-bottom:8px;
+      font-size:1rem;
+      font-weight:600;
+    }
+    .requirements-box ul{
+      padding-left:18px;
+      margin-bottom:0;
+    }
+
+    .games-single-page h2,
+    .games-single-page h3,
+    .games-single-page h4,
+    .games-single-page h5,
+    .games-single-page h6{
+      color:#ffffff;
+    }
   </style>
 </head>
 <body>
+
   <!-- HEADER -->
   <header class="header-section">
-    <div class="header-bar-warp d-flex">
-      <a href="index.html" class="site-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
+    <div class="header-bar-warp d-flex" style="padding:10px;">
+      <a href="index.html" class="site-logo">
+        <img src="img/logo.png" alt="OyunTanıtım" style="padding:10px;">
+      </a>
       <nav class="top-nav-area w-100">
         <ul class="main-menu primary-menu">
           <li><a href="index.html">Ana Sayfa</a></li>
-          <li><a href="games.html">Oyunlar</a></li>
+          <li>
+            <a href="#">Oyunlar</a>
+            <ul class="sub-menu">
+              <li><a href="games.html">Tüm Oyunlar</a></li>
+              <li><a href="oyunlar-coop.html">Co-op Oyun Önerileri</a></li>
+              <li><a href="oyunlar-editor.html">Editörün Seçimi</a></li>
+            </ul>
+          </li>
           <li><a href="duyurular.html">Duyurular</a></li>
           <li><a href="istatistikler.html">İstatistikler</a></li>
-          <li><a href="about.html">Hakkımızda</a></li>
-          <li><a href="contact.html">İletişim</a></li>
+          <li><a href="hakkinda.html">Hakkımızda</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
         </ul>
       </nav>
     </div>
@@ -51,7 +112,9 @@
     <div class="page-info">
       <h2>Helldivers II</h2>
       <div class="site-breadcrumb">
-        <a href="index.html">Ana Sayfa</a> / <a href="games.html">Oyunlar</a> / <span>Helldivers II</span>
+        <a href="index.html">Ana Sayfa</a> /
+        <a href="games.html">Oyunlar</a> /
+        <span>Helldivers II</span>
       </div>
     </div>
   </section>
@@ -60,26 +123,34 @@
   <section class="games-single-page">
     <div class="container">
 
-      <!-- ← Oyun Listesine Dön + Platform Butonları -->
+      <!-- Geri dön + platform butonları -->
       <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 btn-row">
         <a href="games.html" class="site-btn">← Oyun Listesine Dön</a>
         <div class="d-flex flex-wrap btn-row">
           <a href="https://store.steampowered.com/app/553850/HELLDIVERS_2/" target="_blank" class="site-btn steam-btn">Steam</a>
-          <a href="https://www.xbox.com/tr-TR/games/store/helldivers-2/9P3PT7PQJD0M" target="_blank" class="site-btn xbox-btn">Xbox</a>
-          <a href="https://www.playstation.com/en-tr/games/helldivers-2/" target="_blank" class="site-btn ps-btn">PlayStation</a>
+          <a href="#" class="site-btn xbox-btn" aria-disabled="true" data-toggle="tooltip" title="Xbox sürümü için bilgi yakında eklenecek">Xbox</a>
+          <a href="https://store.playstation.com/tr-tr/product/EP9000-PPSA08891_00-HELLDIVERS2GAME0" target="_blank" class="site-btn ps-btn">PlayStation</a>
           <a href="#" class="site-btn epic-btn" aria-disabled="true" data-toggle="tooltip" title="Bu oyun Epic Games’te satışta değil">Epic Games</a>
         </div>
       </div>
 
-      <!-- Fiyat Geçmişi & Platformlar (Sekmeli) -->
-      <div class="game-price-box mt-3">
+      <!-- Fiyat Geçmişi & Platformlar -->
+      <div class="game-price-box mt-3 mb-4">
         <h5>Fiyat Geçmişi & Platformlar</h5>
 
         <ul class="nav nav-pills mb-3" id="hd2PriceTab" role="tablist">
-          <li class="nav-item"><a class="nav-link active" id="hd2-steam-tab" data-toggle="pill" href="#hd2-steam" role="tab">Steam</a></li>
-          <li class="nav-item"><a class="nav-link" id="hd2-xbox-tab" data-toggle="pill" href="#hd2-xbox" role="tab">Xbox</a></li>
-          <li class="nav-item"><a class="nav-link" id="hd2-ps-tab" data-toggle="pill" href="#hd2-ps" role="tab">PlayStation</a></li>
-          <li class="nav-item"><a class="nav-link" id="hd2-epic-tab" data-toggle="pill" href="#hd2-epic" role="tab">Epic Games</a></li>
+          <li class="nav-item">
+            <a class="nav-link active" id="hd2-steam-tab" data-toggle="pill" href="#hd2-steam" role="tab">Steam</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="hd2-ps-tab" data-toggle="pill" href="#hd2-ps" role="tab">PlayStation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="hd2-xbox-tab" data-toggle="pill" href="#hd2-xbox" role="tab">Xbox</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="hd2-epic-tab" data-toggle="pill" href="#hd2-epic" role="tab">Epic Games</a>
+          </li>
         </ul>
 
         <div class="tab-content" id="hd2PriceTabContent">
@@ -90,22 +161,13 @@
                 <tr><th scope="row">Bölge</th><td>Türkiye (TL)</td></tr>
                 <tr><th scope="row">Çıkış Fiyatı</th><td>—</td></tr>
                 <tr><th scope="row">Şu Anki Fiyat</th><td>—</td></tr>
-                <tr><th scope="row">En Düşük Fiyat</th><td>—  <small>(<a href="https://steamdb.info/app/553850/" target="_blank">SteamDB</a>)</small></td></tr>
+                <tr>
+                  <th scope="row">En Düşük Fiyat</th>
+                  <td>— <small>(<a href="https://steamdb.info/app/553850/" target="_blank">SteamDB</a>)</small></td>
+                </tr>
               </tbody>
             </table>
             <a href="https://store.steampowered.com/app/553850/HELLDIVERS_2/" target="_blank" class="site-btn steam-btn btn-sm">Steam Mağazasına Git</a>
-          </div>
-
-          <!-- Xbox -->
-          <div class="tab-pane fade" id="hd2-xbox" role="tabpanel" aria-labelledby="hd2-xbox-tab">
-            <table class="table table-sm table-borderless mb-2 text-light">
-              <tbody>
-                <tr><th scope="row">Platform</th><td>Xbox Store</td></tr>
-                <tr><th scope="row">Şu Anki Fiyat</th><td>—</td></tr>
-                <tr><th scope="row">En Düşük Fiyat</th><td>—</td></tr>
-              </tbody>
-            </table>
-            <a href="https://www.xbox.com/tr-TR/games/store/helldivers-2/9P3PT7PQJD0M" target="_blank" class="site-btn xbox-btn btn-sm">Xbox Mağazasına Git</a>
           </div>
 
           <!-- PlayStation -->
@@ -117,48 +179,145 @@
                 <tr><th scope="row">En Düşük Fiyat</th><td>—</td></tr>
               </tbody>
             </table>
-            <a href="https://www.playstation.com/en-tr/games/helldivers-2/" target="_blank" class="site-btn ps-btn btn-sm">PlayStation Mağazasına Git</a>
+            <a href="https://store.playstation.com/tr-tr/product/EP9000-PPSA08891_00-HELLDIVERS2GAME0" target="_blank" class="site-btn ps-btn btn-sm">PlayStation Mağazasına Git</a>
           </div>
 
-          <!-- Epic (Satışta Değil) -->
+          <!-- Xbox (şimdilik yok gibi senaryoladık) -->
+          <div class="tab-pane fade" id="hd2-xbox" role="tabpanel" aria-labelledby="hd2-xbox-tab">
+            <div class="alert alert-secondary mb-2">
+              Xbox sürümü için fiyat bilgisi henüz eklenmedi
+              <span class="badge-unavail">Güncellenecek</span>
+            </div>
+          </div>
+
+          <!-- Epic (yok) -->
           <div class="tab-pane fade" id="hd2-epic" role="tabpanel" aria-labelledby="hd2-epic-tab">
             <div class="alert alert-secondary mb-2">
-              Bu oyun Epic Games Store’da satışta değil <span class="badge-unavail">Satışta değil</span>
+              Bu oyun Epic Games Store’da satışta değil
+              <span class="badge-unavail">Satışta değil</span>
             </div>
           </div>
         </div>
-
-        <small>Not: Rakamları SteamDB ve ilgili mağaza sayfalarından doldurabilirsin.</small>
       </div>
 
       <!-- Kapak görseli -->
-      <img src="img/games/helldivers2.jpg" class="img-fluid rounded mb-4 shadow-hero" alt="Helldivers II">
+      <img src="img/games/helldivers2.jpg"
+           class="img-fluid rounded mb-4 shadow-hero"
+           alt="Helldivers II kapak görseli">
 
       <!-- Bilgi rozetleri -->
-      <div class="info-badges mb-3">
-        <span>Tür: Kooperatif Aksiyon FPS</span>
-        <span>Geliştirici: Arrowhead</span>
-        <span>Platform: PC/PS5</span>
+      <div class="info-badges mb-4">
+        <span>Tür: Co-op Üçüncü Şahıs Nişancı</span>
+        <span>Geliştirici: Arrowhead Game Studios</span>
+        <span>Platform: PC / PlayStation</span>
       </div>
 
-      <!-- Oynanış Özeti -->
-      <h4>Oynanış Özeti</h4>
-      <p>Galaksiyi özgürlük adına savunan seçkin birliklerin yoğun aksiyonlu operasyonları. Taktiksel ilerleme, dost ateşi ve ekip koordinasyonu ön plandadır.</p>
+      <!-- GENEL BAKIŞ -->
+      <h3>Genel Bakış</h3>
+      <p>
+        Helldivers II, dört kişiye kadar co-op oynanabilen, kaotik ve bol patlamalı bir üçüncü şahıs aksiyon oyunu.
+        Oyuncular “Helldiver” adı verilen seçkin birliklere katılıp galaksiyi istilacı uzaylı fraksiyonlardan kurtarmaya
+        çalışırken aynı zamanda “yönetilen demokrasi”yi yaymaya çalışıyor.
+      </p>
+      <p>
+        Görevler; düşman gezegenlerine iniş yapıp belirli hedefleri tamamlamak, savunma hatları kurmak, tahliye noktalarına
+        sağ salim ulaşmak ve takımca hayatta kalmak üzerine kurulu. Dost ateşi açık olduğundan, takım arkadaşlarınızı yanlışlıkla
+        havaya uçurmak oyunun eğlencesinin resmi parçası.
+      </p>
 
-      <!-- Sistem Gereksinimleri -->
-      <h4>Sistem Gereksinimleri</h4>
+      <!-- OYNANIŞ & STRATEJİK DERİNLİK -->
+      <h4>Oynanış, Stratagem’ler ve Takım Oyunu</h4>
+      <p>
+        Helldivers II’nin en ayırt edici özelliği, “Stratagem” adı verilen taktik çağrılar. Uçak saldırıları, ağır silah
+        paketleri, taretler, tahkimatlar, hava ikmali ve daha fazlasını belirli komut kombinasyonlarıyla çağırıyorsunuz.
+        Yanlış girilen bir kombinasyon, yoğun çatışmalar sırasında paniğe sebep olabiliyor ve bu da oyunun mizahına katkı sağlıyor.
+      </p>
       <ul>
-        <li>İşletim Sistemi: Windows 10 64-bit</li>
-        <li>İşlemci: Intel i7 veya eşdeğeri</li>
-        <li>Bellek: 12 GB RAM</li>
-        <li>Ekran Kartı: NVIDIA GTX 1060 / eşdeğeri</li>
-        <li>Depolama: 60 GB</li>
+        <li>Farklı gezegen tipleri, hava koşulları ve görev hedefleri,</li>
+        <li>Giderek zorlaşan düşman dalgaları, farklı fraksiyonlar,</li>
+        <li>Dost ateşi nedeniyle ciddi koordinasyon gerektiren co-op deneyimi,</li>
+        <li>Silah, zırh ve Stratagem kombinasyonları ile farklı rol dağılımları.</li>
       </ul>
 
-      <!-- Fragman -->
+      <!-- GALAKSİ SAVAŞI VE İLERLEME -->
+      <h4>Galaktik Savaş ve İlerleme Hissi</h4>
+      <p>
+        Oyun, tüm oyuncu topluluğunun ortak katıldığı bir “galaktik savaş haritası” kullanıyor. Yaptığınız her başarılı görev,
+        galaksideki cephelerde Super Earth lehine bir miktar ilerleme sağlıyor. Bölge kaybetmek de mümkün, bu da oyuna canlı
+        bir servis oyunu hissi katıyor.
+      </p>
+
+      <!-- KİME ÖNERİLİR? -->
+      <h4>Kime Önerilir?</h4>
+      <ul>
+        <li>Arkadaşlarıyla birlikte oynamayı seven, co-op odaklı aksiyon isteyenlere,</li>
+        <li>Dost ateşini kapatmayan, “kaos içindeki düzeni” seven oyunculara,</li>
+        <li>Görev tabanlı, tekrar tekrar oynanabilir içerik arayanlara,</li>
+        <li>Sürekli güncelleme alan canlı oyunları takip etmeyi sevenlere.</li>
+      </ul>
+
+      <!-- ARTILAR / EKSİLER -->
+      <h4>Artılar / Eksiler</h4>
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="requirements-box">
+            <h5>Artılar</h5>
+            <ul>
+              <li>Çok eğlenceli ve kaotik co-op deneyimi</li>
+              <li>Stratagem sistemi ile yüksek taktik çeşitlilik</li>
+              <li>Galaktik savaş haritasıyla toplulukla birlikte ilerleme hissi</li>
+              <li>Sürekli gelen etkinlikler ve güncellemeler</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="requirements-box">
+            <h5>Eksiler</h5>
+            <ul>
+              <li>Solo oynandığında aynı tadı vermeyebiliyor</li>
+              <li>Dost ateşi yeni oyuncular için çok cezalandırıcı olabilir</li>
+              <li>Yoğun anlarda ekran karmaşası yaşanabiliyor</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SİSTEM GEREKSİNİMLERİ -->
+      <h4>Sistem Gereksinimleri (PC)</h4>
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="requirements-box">
+            <h5>Minimum</h5>
+            <ul>
+              <li>İşletim Sistemi: Windows 10 64-bit</li>
+              <li>İşlemci: Intel Core i7-4790 / AMD Ryzen 5 1500X</li>
+              <li>Bellek: 8 GB RAM</li>
+              <li>Ekran Kartı: NVIDIA GTX 1050 Ti / AMD eşdeğeri</li>
+              <li>Depolama: 60 GB boş alan</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="requirements-box">
+            <h5>Önerilen</h5>
+            <ul>
+              <li>İşletim Sistemi: Windows 10/11 64-bit</li>
+              <li>İşlemci: Intel Core i7-9700K / AMD Ryzen 7 3700X</li>
+              <li>Bellek: 16 GB RAM</li>
+              <li>Ekran Kartı: NVIDIA RTX 2060 / AMD RX 5700 XT</li>
+              <li>Depolama: SSD üzerinde 60 GB boş alan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- FRAGMAN -->
       <h4>Fragman</h4>
       <div class="embed-responsive embed-responsive-16by9 mb-4">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3GzvuUjPoK8" allowfullscreen title="Helldivers II fragman"></iframe>
+        <iframe class="embed-responsive-item"
+                src="https://www.youtube.com/embed/UC5EpJR0GBQ?si=FtKTYlASiSu_cGdK"
+                allowfullscreen
+                title="Helldivers II fragman"></iframe>
       </div>
 
     </div>
@@ -167,16 +326,17 @@
   <!-- FOOTER -->
   <footer class="footer-section">
     <div class="container">
-
-      <a href="index.html" class="footer-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
+      <a href="index.html" class="footer-logo">
+        <img src="img/logo.png" alt="OyunTanıtım">
+      </a>
 
       <ul class="main-menu footer-menu">
-        <li><a href="index.html">Ana Saya</a></li>
+        <li><a href="index.html">Ana Sayfa</a></li>
         <li><a href="games.html">Oyunlar</a></li>
         <li><a href="duyurular.html">Duyurular</a></li>
         <li><a href="istatistikler.html">İstatistikler</a></li>
-        <li><a href="about.html">Hakkımızda</a></li>
-        <li><a href="contact.html">İletişim</a></li>
+        <li><a href="hakkinda.html">Hakkımızda</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
       </ul>
 
       <div class="footer-social d-flex justify-content-center">
@@ -189,7 +349,6 @@
       <div class="copyright">
         © 2025 OyunTanıtım | TBL303 Web Tasarımı Dersi Projesi
       </div>
-
     </div>
   </footer>
 
@@ -201,3 +360,10 @@
   <script src="js/jquery.sticky-sidebar.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+</body>
+</html>
