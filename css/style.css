@@ -1990,3 +1990,35 @@ ol {
   margin-top: 10px;
   color: #e6e4ff;
 }
+
+/* ===========================
+   Duyurular sayfası (lacivert arka plan) okunabilir metin
+   =========================== */
+
+.blog-section {
+  color: #f5f5ff;
+}
+
+.blog-section h1,
+.blog-section h2,
+.blog-section h3,
+.blog-section h4,
+.blog-section h5,
+.blog-section h6 {
+  color: #ffffff;
+}
+
+/* Kart içi metinler */
+.blog-section .blog-text p {
+  color: #e0defa;
+}
+
+/* "Kaynak" linkleri */
+.blog-section .blog-text .read-more {
+  color: #ffb320;
+  font-weight: 600;
+}
+
+.blog-section .blog-text .read-more:hover {
+  opacity: 0.9;
+}
