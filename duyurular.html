@@ -41,6 +41,8 @@
 <!-- Header -->
 <header class="header-section">
   <div class="header-warp">
+
+    <!-- Sosyal medya barı -->
     <div class="header-social d-flex justify-content-end">
       <p>Bizi Takip Et:</p>
       <a href="#"><i class="fa fa-facebook"></i></a>
@@ -49,12 +51,28 @@
       <a href="#"><i class="fa fa-youtube"></i></a>
     </div>
 
-    <div class="header-bar-warp d-flex">
-      <a href="index.html" class="site-logo"><img src="img/logo.png" alt=""></a>
+    <!-- Menü barı -->
+    <div class="header-bar-warp d-flex" style="padding:10px;">
+      <!-- Logo -->
+      <a href="index.html" class="site-logo">
+        <img src="img/logo.png" alt="OyunTanıtım" style="padding:10px;">
+      </a>
+
+      <!-- Navigasyon -->
       <nav class="top-nav-area w-100">
         <ul class="main-menu primary-menu">
           <li><a href="index.html">Ana Sayfa</a></li>
-          <li><a href="games.html">Oyunlar</a></li>
+
+          <!-- Oyunlar + Kategoriler -->
+          <li>
+            <a href="#">Oyunlar</a>
+            <ul class="sub-menu">
+              <li><a href="games.html">Tüm Oyunlar</a></li>
+              <li><a href="oyunlar-coop.html">Co-op Oyun Önerileri</a></li>
+              <li><a href="oyunlar-editor.html">Editörün Seçimi</a></li>
+            </ul>
+          </li>
+
           <li class="active"><a href="duyurular.html">Duyurular</a></li>
           <li><a href="istatistikler.html">İstatistikler</a></li>
           <li><a href="hakkinda.html">Hakkımızda</a></li>
@@ -62,8 +80,10 @@
         </ul>
       </nav>
     </div>
+
   </div>
 </header>
+
 
 <!-- Üst Görsel -->
 <section class="page-top-section set-bg" data-setbg="img/page-top-bg/1.jpg">
