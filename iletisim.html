@@ -8,6 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="img/favicon.ico" rel="shortcut icon"/>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" href="css/font-awesome.min.css"/>
   <link rel="stylesheet" href="css/slicknav.min.css"/>
@@ -15,6 +17,40 @@
   <link rel="stylesheet" href="css/magnific-popup.css"/>
   <link rel="stylesheet" href="css/animate.css"/>
   <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- İletişim sayfasına özel okunabilirlik -->
+  <style>
+    .contact-page,
+    .contact-page p,
+    .contact-page li,
+    .contact-page label,
+    .contact-page .contact-info-list li {
+      color: #f5f5ff;
+    }
+
+    .contact-page .section-title h2,
+    .contact-page h2,
+    .contact-page h3,
+    .contact-page h4 {
+      color: #ffffff;
+    }
+
+    .contact-page .contact-info-list i {
+      color: #ffb320;
+    }
+
+    .contact-page input,
+    .contact-page textarea {
+      background: rgba(0, 0, 0, 0.25);
+      border-color: rgba(255, 255, 255, 0.35);
+      color: #f5f5ff;
+    }
+
+    .contact-page input::placeholder,
+    .contact-page textarea::placeholder {
+      color: rgba(245, 245, 255, 0.8);
+    }
+  </style>
 </head>
 <body>
 
@@ -33,9 +69,9 @@
         <a href="#"><i class="fa fa-youtube"></i></a>
       </div>
 
-      <div class="header-bar-warp d-flex">
+      <div class="header-bar-warp d-flex" style="padding:10px;">
         <a href="index.html" class="site-logo">
-          <img src="img/logo.png" alt="OyunTanıtım">
+          <img src="img/logo.png" alt="OyunTanıtım" style="padding:10px;">
         </a>
 
         <nav class="top-nav-area w-100">
@@ -100,7 +136,9 @@
           <div class="section-title">
             <h2>İletişim Formu</h2>
           </div>
-          <form class="contact-form" action="#" method="post">
+
+          <!-- Form (id eklendi) -->
+          <form class="contact-form" id="iletisimFormu" action="#" method="post">
             <div class="row">
               <div class="col-md-6">
                 <input type="text" name="adsoyad" placeholder="Ad Soyad">
@@ -119,8 +157,9 @@
               </div>
             </div>
           </form>
-          <p class="mt-2" style="font-size:13px; color:#aaa;">
-            Bu form eğitim amaçlıdır. Gerçek bir e-posta gönderimi yapılmamaktadır; proje kapsamında örnek arayüz olarak tasarlanmıştır.
+
+          <p class="mt-2" style="font-size:13px; color:#ddd;">
+            Eposta Gönderme Formu
           </p>
         </div>
       </div>
@@ -140,7 +179,6 @@
       </div>
     </div>
     <div class="map-area">
-      <!-- İstersen buraya kendi seçtiğin bir adresin embed kodunu koyabilirsin -->
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3028.2179334847204!2d29.91874467614093!3d40.824093971371155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabd76ae1820f5%3A0x7630c3f6b9ec61e3!2sKocaeli%20%C3%9Cniversitesi%20Umuttepe%20Yerle%C5%9Fkesi!5e0!3m2!1str!2str!4v1700000000000"
         width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
@@ -176,6 +214,26 @@
     </div>
   </footer>
 
+  <!-- Gönderildi kutusu (Bootstrap modal) -->
+  <div class="modal fade" id="contactSuccessModal" tabindex="-1" role="dialog" aria-labelledby="contactSuccessLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+      <div class="modal-content" style="border-radius:10px;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactSuccessLabel">Mesaj Gönderildi</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Kapat">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Mesajın başarıyla gönderildi.  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="site-btn" data-dismiss="modal">Tamam</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- JS -->
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -183,6 +241,18 @@
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.sticky-sidebar.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
+
+  <!-- Basit: 405 yerine "Gönderildi" kutusu -->
+  <script>
+    $(function () {
+      $('#iletisimFormu').on('submit', function (e) {
+        e.preventDefault();           // Gerçek POST gitmesin, 405 olmasın
+        $('#contactSuccessModal')     // Üstten küçük kutu (modal) aç
+          .modal('show');
+      });
+    });
+  </script>
+
   <script src="js/main.js"></script>
 
 </body>
