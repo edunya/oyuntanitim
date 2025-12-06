@@ -3,34 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="It Takes Two oyun detayları, sistem gereksinimleri ve fragman.">
-  <meta name="keywords" content="oyun, tanıtım, inceleme, fragman, sistem gereksinimleri">
-  <title>It Takes Two</title>
+  <meta name="description" content="It Takes Two detaylı inceleme, sistem gereksinimleri ve fragman.">
+  <meta name="keywords" content="oyun, tanıtım, inceleme, fragman, sistem gereksinimleri, It Takes Two">
+  <title>It Takes Two | OyunTanıtım</title>
+
+  <link href="img/favicon.ico" rel="shortcut icon"/>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/slicknav.min.css"/>
+  <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+  <link rel="stylesheet" href="css/magnific-popup.css"/>
+  <link rel="stylesheet" href="css/animate.css"/>
   <link rel="stylesheet" href="css/style.css"/>
+
   <style>
-    .info-badges span{display:inline-block;margin:4px 6px;padding:6px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;font-size:12px;color:#ddd}
+    .info-badges span{
+      display:inline-block;
+      margin:4px 6px;
+      padding:6px 10px;
+      border:1px solid rgba(255,255,255,.2);
+      border-radius:999px;
+      font-size:12px;
+      color:#ddd;
+    }
     .btn-row{gap:10px}
     .shadow-hero{box-shadow:0 10px 30px rgba(0,0,0,.35)}
-    /* Platform buton renkleri */
+
     .site-btn.steam-btn{background:#171a21}
     .site-btn.xbox-btn{background:#107c10}
     .site-btn.ps-btn{background:#003791}
     .site-btn.epic-btn{background:#202020}
+    .site-btn[aria-disabled="true"]{
+      opacity:.55;
+      pointer-events:none;
+      cursor:not-allowed;
+    }
+
+    .badge-unavail{
+      display:inline-block;
+      font-size:.75rem;
+      padding:.2rem .5rem;
+      background:#6c757d;
+      border-radius:.35rem;
+      margin-left:.5rem;
+    }
+
+    .requirements-box{
+      background:rgba(0,0,0,.25);
+      border-radius:12px;
+      padding:15px 18px;
+      margin-bottom:20px;
+    }
+    .requirements-box h5{
+      margin-bottom:8px;
+      font-size:1rem;
+      font-weight:600;
+    }
+    .requirements-box ul{
+      padding-left:18px;
+      margin-bottom:0;
+    }
+
+    .games-single-page h2,
+    .games-single-page h3,
+    .games-single-page h4,
+    .games-single-page h5,
+    .games-single-page h6{
+      color:#ffffff;
+    }
   </style>
 </head>
 <body>
+
   <header class="header-section">
-    <div class="header-bar-warp d-flex">
-      <a href="index.html" class="site-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
+    <div class="header-bar-warp d-flex" style="padding:10px;">
+      <a href="index.html" class="site-logo">
+        <img src="img/logo.png" alt="OyunTanıtım" style="padding:10px;">
+      </a>
       <nav class="top-nav-area w-100">
         <ul class="main-menu primary-menu">
           <li><a href="index.html">Ana Sayfa</a></li>
-          <li><a href="games.html">Oyunlar</a></li>
+          <li>
+            <a href="#">Oyunlar</a>
+            <ul class="sub-menu">
+              <li><a href="games.html">Tüm Oyunlar</a></li>
+              <li><a href="oyunlar-coop.html">Co-op Oyun Önerileri</a></li>
+              <li><a href="oyunlar-editor.html">Editörün Seçimi</a></li>
+            </ul>
+          </li>
           <li><a href="duyurular.html">Duyurular</a></li>
           <li><a href="istatistikler.html">İstatistikler</a></li>
-          <li><a href="about.html">Hakkımızda</a></li>
-          <li><a href="contact.html">İletişim</a></li>
+          <li><a href="hakkinda.html">Hakkımızda</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
         </ul>
       </nav>
     </div>
@@ -40,7 +107,9 @@
     <div class="page-info">
       <h2>It Takes Two</h2>
       <div class="site-breadcrumb">
-        <a href="index.html">Ana Sayfa</a> / <a href="games.html">Oyunlar</a> / <span>It Takes Two</span>
+        <a href="index.html">Ana Sayfa</a> /
+        <a href="games.html">Oyunlar</a> /
+        <span>It Takes Two</span>
       </div>
     </div>
   </section>
@@ -48,26 +117,32 @@
   <section class="games-single-page">
     <div class="container">
 
-      <!-- ← Oyun Listesine Dön + Platform Butonları -->
       <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 btn-row">
         <a href="games.html" class="site-btn">← Oyun Listesine Dön</a>
         <div class="d-flex flex-wrap btn-row">
           <a href="https://store.steampowered.com/app/1426210/It_Takes_Two/" target="_blank" class="site-btn steam-btn">Steam</a>
-          <a href="https://www.xbox.com/tr-TR/games/store/it-takes-two/9NKJ0VZQ4N0L" target="_blank" class="site-btn xbox-btn">Xbox</a>
-          <a href="https://www.playstation.com/tr-tr/games/it-takes-two/" target="_blank" class="site-btn ps-btn">PlayStation</a>
-          <a href="https://store.epicgames.com/tr/p/it-takes-two" target="_blank" class="site-btn epic-btn">Epic Games</a>
+          <a href="https://www.xbox.com/tr-TR/games/store/it-takes-two/9NNJ0QJ4QH3L" target="_blank" class="site-btn xbox-btn">Xbox</a>
+          <a href="https://store.playstation.com/tr-tr/product/EP0006-PPSA02361_00-0000000000000000" target="_blank" class="site-btn ps-btn">PlayStation</a>
+          <a href="#" class="site-btn epic-btn" aria-disabled="true" data-toggle="tooltip" title="Bu oyun Epic Games’te satışta değil">Epic Games</a>
         </div>
       </div>
 
-      <!-- Fiyat Geçmişi & Platformlar (Sekmeli) -->
-      <div class="game-price-box mt-3">
+      <div class="game-price-box mt-3 mb-4">
         <h5>Fiyat Geçmişi & Platformlar</h5>
 
         <ul class="nav nav-pills mb-3" id="ittPriceTab" role="tablist">
-          <li class="nav-item"><a class="nav-link active" id="itt-steam-tab" data-toggle="pill" href="#itt-steam" role="tab">Steam</a></li>
-          <li class="nav-item"><a class="nav-link" id="itt-xbox-tab" data-toggle="pill" href="#itt-xbox" role="tab">Xbox</a></li>
-          <li class="nav-item"><a class="nav-link" id="itt-ps-tab" data-toggle="pill" href="#itt-ps" role="tab">PlayStation</a></li>
-          <li class="nav-item"><a class="nav-link" id="itt-epic-tab" data-toggle="pill" href="#itt-epic" role="tab">Epic Games</a></li>
+          <li class="nav-item">
+            <a class="nav-link active" id="itt-steam-tab" data-toggle="pill" href="#itt-steam" role="tab">Steam</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="itt-xbox-tab" data-toggle="pill" href="#itt-xbox" role="tab">Xbox</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="itt-ps-tab" data-toggle="pill" href="#itt-ps" role="tab">PlayStation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="itt-epic-tab" data-toggle="pill" href="#itt-epic" role="tab">Epic Games</a>
+          </li>
         </ul>
 
         <div class="tab-content" id="ittPriceTabContent">
@@ -78,7 +153,8 @@
                 <tr><th scope="row">Bölge</th><td>Türkiye (TL)</td></tr>
                 <tr><th scope="row">Çıkış Fiyatı</th><td>—</td></tr>
                 <tr><th scope="row">Şu Anki Fiyat</th><td>—</td></tr>
-                <tr><th scope="row">En Düşük Fiyat</th>
+                <tr>
+                  <th scope="row">En Düşük Fiyat</th>
                   <td>— <small>(<a href="https://steamdb.info/app/1426210/" target="_blank">SteamDB</a>)</small></td>
                 </tr>
               </tbody>
@@ -95,7 +171,7 @@
                 <tr><th scope="row">En Düşük Fiyat</th><td>—</td></tr>
               </tbody>
             </table>
-            <a href="https://www.xbox.com/tr-TR/games/store/it-takes-two/9NKJ0VZQ4N0L" target="_blank" class="site-btn xbox-btn btn-sm">Xbox Mağazasına Git</a>
+            <a href="https://www.xbox.com/tr-TR/games/store/it-takes-two/9NNJ0QJ4QH3L" target="_blank" class="site-btn xbox-btn btn-sm">Xbox Mağazasına Git</a>
           </div>
 
           <!-- PlayStation -->
@@ -107,61 +183,154 @@
                 <tr><th scope="row">En Düşük Fiyat</th><td>—</td></tr>
               </tbody>
             </table>
-            <a href="https://www.playstation.com/tr-tr/games/it-takes-two/" target="_blank" class="site-btn ps-btn btn-sm">PlayStation Mağazasına Git</a>
+            <a href="https://store.playstation.com/tr-tr/product/EP0006-PPSA02361_00-0000000000000000" target="_blank" class="site-btn ps-btn btn-sm">PlayStation Mağazasına Git</a>
           </div>
 
-          <!-- Epic -->
+          <!-- Epic (yok) -->
           <div class="tab-pane fade" id="itt-epic" role="tabpanel" aria-labelledby="itt-epic-tab">
-            <table class="table table-sm table-borderless mb-2 text-light">
-              <tbody>
-                <tr><th scope="row">Platform</th><td>Epic Games Store</td></tr>
-                <tr><th scope="row">Şu Anki Fiyat</th><td>—</td></tr>
-                <tr><th scope="row">En Düşük Fiyat</th><td>—</td></tr>
-              </tbody>
-            </table>
-            <a href="https://store.epicgames.com/tr/p/it-takes-two" target="_blank" class="site-btn epic-btn btn-sm">Epic Mağazasına Git</a>
+            <div class="alert alert-secondary mb-2">
+              Bu oyun Epic Games Store’da satışta değil
+              <span class="badge-unavail">Satışta değil</span>
+            </div>
           </div>
         </div>
-
-        <small>Not: Fiyat alanlarını SteamDB ve mağaza sayfalarından aldığın rakamlarla doldur.</small>
       </div>
 
-      <img src="img/games/ittakestwo.jpg" class="img-fluid rounded mb-4 shadow-hero" alt="It Takes Two">
+      <img src="img/games/ittakestwo.jpg"
+           class="img-fluid rounded mb-4 shadow-hero"
+           alt="It Takes Two kapak görseli">
 
-      <div class="info-badges mb-3">
-        <span>Tür: Kooperatif Macera</span><span>Geliştirici: Hazelight</span><span>Platform: PC/PS/Xbox</span>
+      <div class="info-badges mb-4">
+        <span>Tür: Co-op Aksiyon Macera</span>
+        <span>Geliştirici: Hazelight Studios</span>
+        <span>Platform: PC / PlayStation / Xbox</span>
       </div>
 
-      <h4>Oynanış Özeti</h4>
-      <p>İki karakterin iş birliğiyle ilerlediği, yaratıcı bulmaca-mekanikleri ve duygusal anlatımıyla öne çıkan bir macera oyunu. Her bölüm farklı bir oyun fikri üzerine kurulu mini-mekanikler içerir.</p>
+      <!-- GENEL BAKIŞ -->
+      <h3>Genel Bakış</h3>
+      <p>
+        It Takes Two, baştan sona iki kişi oynanmak üzere tasarlanmış, co-op odaklı bir aksiyon-macera oyunu. Bir ilişki
+        terapisi kitabının rehberliğinde oyuncular, ayrılmanın eşiğindeki bir çift olan Cody ve May’in kukla bedenlerine
+        bürünüyor ve bozulan ilişkilerini onarmaya çalışırken birbirinden yaratıcı bölümlerden geçiyor.
+      </p>
+      <p>
+        Her bölüm, hikâyedeki bir duyguyu veya krizi temsil ediyor; buna uygun olarak oynanış mekaniği de değişiyor. Bazen
+        manyetik güçlerle bulmacalar çözüyor, bazen zamanı geri sarıyor, bazen de tamamen farklı bir mini oyunun içinde
+        buluyorsunuz kendinizi.
+      </p>
 
-      <!-- Sistem Gereksinimleri -->
-      <h4>Sistem Gereksinimleri</h4>
+      <!-- OYNANIŞ VE CO-OP MANTIĞI -->
+      <h4>Oynanış Yapısı ve Co-op Dinamikleri</h4>
+      <p>
+        Oyun, split-screen veya çevrim içi co-op olarak oynanıyor; yani tek başınıza oynayamıyorsunuz, mutlaka bir eşe
+        ihtiyacınız var. Her iki oyuncu da farklı yeteneklere sahip olduğu için iletişim ve koordinasyon kritik önem
+        taşıyor. Bir oyuncu etkileşim butonuna basarken diğeri platformu hareket ettiriyor, biri zamanı kontrol ederken
+        diğeri fiziksel engelleri aşıyor.
+      </p>
       <ul>
-        <li>İşletim Sistemi: Windows 10 64-bit</li><li>İşlemci: Intel Core i5-3570K / AMD FX-8350</li><li>Bellek: 8 GB RAM</li><li>Ekran Kartı: NVIDIA GTX 660 / AMD R9 290</li><li>Depolama: 50 GB</li>
+        <li>Her bölümde değişen mekanikler ve oynanış dinamikleri,</li>
+        <li>Hikâyeyle uyumlu tematik görev tasarımları,</li>
+        <li>Çok sayıda mini oyun ve rekabetçi küçük meydan okumalar,</li>
+        <li>Takım çalışmasını zorunlu kılan bölüm tasarımı.</li>
       </ul>
 
-      <!-- Fragman -->
+      <!-- HİKÂYE VE TON -->
+      <h4>Hikâye, Mizah ve Duygusal Ton</h4>
+      <p>
+        It Takes Two, boşanma sürecindeki bir aileyi anlatırken hem mizahi hem de duygusal bir ton kullanıyor. Dr. Hakim adlı
+        “ilişki gurusu” kitap karakteri, çiftin karşısına sürekli yeni görevler çıkarıyor; bu görevler çoğu zaman komik,
+        zaman zaman da duygusal sonuçlar doğuruyor.
+      </p>
+
+      <!-- KİME ÖNERİLİR? -->
+      <h4>Kime Önerilir?</h4>
+      <ul>
+        <li>Aynı ekranda ya da online olarak arkadaşlarıyla/co-op oynamayı sevenlere,</li>
+        <li>Platform ve bulmaca karışımı oyunları seven oyunculara,</li>
+        <li>Hikâyesi olan ama çok da kasmayan aksiyon maceralar arayanlara,</li>
+        <li>Çiftler, kardeşler veya yakın arkadaşlarla oynanacak oyun arayanlara.</li>
+      </ul>
+
+      <!-- ARTILAR / EKSİLER -->
+      <h4>Artılar / Eksiler</h4>
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="requirements-box">
+            <h5>Artılar</h5>
+            <ul>
+              <li>Her bölümde değişen yaratıcı mekanikler</li>
+              <li>İki kişilik co-op deneyimine özel tasarım</li>
+              <li>Güçlü görsel stil ve hoş müzikler</li>
+              <li>Dengeyi iyi tutan mizah ve duygusal anlar</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="requirements-box">
+            <h5>Eksiler</h5>
+            <ul>
+              <li>Tek başına oynanabilmemesi,</li>
+              <li>Bazı bölümlerde öğrenmesi biraz zaman alan mekanikler,</li>
+              <li>Sıkı bir platform deneyimi bekleyenler için zorlayıcı olabilir.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SİSTEM GEREKSİNİMLERİ -->
+      <h4>Sistem Gereksinimleri (PC)</h4>
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="requirements-box">
+            <h5>Minimum</h5>
+            <ul>
+              <li>İşletim Sistemi: Windows 10 64-bit</li>
+              <li>İşlemci: Intel Core i3-2100 / AMD FX-6300</li>
+              <li>Bellek: 8 GB RAM</li>
+              <li>Ekran Kartı: NVIDIA GTX 660 / AMD HD 7870</li>
+              <li>Depolama: 50 GB boş alan</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="requirements-box">
+            <h5>Önerilen</h5>
+            <ul>
+              <li>İşletim Sistemi: Windows 10/11 64-bit</li>
+              <li>İşlemci: Dört çekirdekli modern bir CPU</li>
+              <li>Bellek: 16 GB RAM</li>
+              <li>Ekran Kartı: NVIDIA GTX 1060 / AMD RX 580</li>
+              <li>Depolama: SSD üzerinde 50 GB boş alan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- FRAGMAN -->
       <h4>Fragman</h4>
       <div class="embed-responsive embed-responsive-16by9 mb-4">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ohClxMmNLQQ" allowfullscreen title="It Takes Two fragman"></iframe>
+        <iframe class="embed-responsive-item"
+                src="https://www.youtube.com/embed/GAWHzGNcTEw?si=bF7cQ0Bhfu5BK-Cy"
+                allowfullscreen
+                title="It Takes Two fragman"></iframe>
       </div>
+
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer-section">
     <div class="container">
-
-      <a href="index.html" class="footer-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
+      <a href="index.html" class="footer-logo">
+        <img src="img/logo.png" alt="OyunTanıtım">
+      </a>
 
       <ul class="main-menu footer-menu">
         <li><a href="index.html">Ana Sayfa</a></li>
         <li><a href="games.html">Oyunlar</a></li>
         <li><a href="duyurular.html">Duyurular</a></li>
         <li><a href="istatistikler.html">İstatistikler</a></li>
-        <li><a href="about.html">Hakkımızda</a></li>
-        <li><a href="contact.html">İletişim</a></li>
+        <li><a href="hakkinda.html">Hakkımızda</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
       </ul>
 
       <div class="footer-social d-flex justify-content-center">
@@ -174,7 +343,6 @@
       <div class="copyright">
         © 2025 OyunTanıtım | TBL303 Web Tasarımı Dersi Projesi
       </div>
-
     </div>
   </footer>
 
@@ -185,5 +353,10 @@
   <script src="js/jquery.sticky-sidebar.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
 </body>
 </html>
