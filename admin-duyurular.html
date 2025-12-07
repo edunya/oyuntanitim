@@ -22,7 +22,6 @@
   <link rel="stylesheet" href="css/style.css"/>
 
   <style>
-    /* Admin sayfalar için koyu arkaplan + okunaklı metin */
     body.admin-page {
       background: #501755;
       background: -webkit-linear-gradient(45deg, #501755 0%, #2d1854 100%);
@@ -41,7 +40,6 @@
       color: #ffffff;
     }
 
-    /* Admin badge */
     .admin-badge {
       display: inline-block;
       padding: 4px 10px;
@@ -107,15 +105,14 @@
       font-weight: 500;
       letter-spacing: 1px;
       display: inline-block;
+      cursor: pointer;
     }
-
     .site-btn-secondary:hover {
       opacity: 0.9;
       color: #fff;
       text-decoration: none;
     }
 
-    /* Form alanları koyu tema */
     body.admin-page .form-control {
       background: #161632;
       border-color: #343467;
@@ -158,7 +155,6 @@
         <ul class="main-menu primary-menu">
           <li><a href="index.html">Ana Sayfa</a></li>
 
-          <!-- Oyunlar -->
           <li>
             <a href="#">Oyunlar</a>
             <ul class="sub-menu">
@@ -181,7 +177,6 @@
 
           <li><a href="iletisim.html">İletişim</a></li>
 
-          <!-- Yönetim menü grubu -->
           <li class="active">
             <a href="#">Yönetim</a>
             <ul class="sub-menu">
@@ -214,7 +209,7 @@
       <div class="d-flex justify-content-between align-items-center mb-3">
         <div>
           <h3>Mevcut Duyurular</h3>
-          <small>Yayında olan ve planlanan duyuruların kısa listesi.</small>
+          <small>Bu tablo, duyuruların nasıl listeleneceğini gösteren bir yapı sunar.</small>
         </div>
         <a href="#yeniDuyuruFormu" class="site-btn-secondary">Yeni Duyuru Ekle</a>
       </div>
@@ -226,7 +221,7 @@
               <th>#</th>
               <th>Başlık</th>
               <th>Kategori</th>
-              <th>İlgili Oyun</hth>
+              <th>İlgili Oyun</th>
               <th>Yayın Tarihi</th>
               <th>Durum</th>
               <th>İşlemler</th>
@@ -241,8 +236,8 @@
               <td>08.04.2025</td>
               <td><span class="badge badge-live">Yayında</span></td>
               <td>
-                <button class="btn btn-sm btn-outline-light">Düzenle</button>
-                <button class="btn btn-sm btn-outline-danger">Sil</button>
+                <button class="site-btn-secondary btn-sm">Düzenle</button>
+                <button class="site-btn-secondary btn-sm">Sil</button>
               </td>
             </tr>
             <tr>
@@ -253,8 +248,8 @@
               <td>21.06.2025</td>
               <td><span class="badge badge-live">Yayında</span></td>
               <td>
-                <button class="btn btn-sm btn-outline-light">Düzenle</button>
-                <button class="btn btn-sm btn-outline-danger">Sil</button>
+                <button class="site-btn-secondary btn-sm">Düzenle</button>
+                <button class="site-btn-secondary btn-sm">Sil</button>
               </td>
             </tr>
             <tr>
@@ -265,8 +260,8 @@
               <td>15.03.2025</td>
               <td><span class="badge badge-planned">Planlandı</span></td>
               <td>
-                <button class="btn btn-sm btn-outline-light">Düzenle</button>
-                <button class="btn btn-sm btn-outline-danger">Sil</button>
+                <button class="site-btn-secondary btn-sm">Düzenle</button>
+                <button class="site-btn-secondary btn-sm">Sil</button>
               </td>
             </tr>
             <tr>
@@ -277,8 +272,8 @@
               <td>01.02.2025</td>
               <td><span class="badge badge-draft">Taslak</span></td>
               <td>
-                <button class="btn btn-sm btn-outline-light">Düzenle</button>
-                <button class="btn btn-sm btn-outline-danger">Sil</button>
+                <button class="site-btn-secondary btn-sm">Düzenle</button>
+                <button class="site-btn-secondary btn-sm">Sil</button>
               </td>
             </tr>
             <tr>
@@ -289,8 +284,8 @@
               <td>10.01.2025</td>
               <td><span class="badge badge-live">Yayında</span></td>
               <td>
-                <button class="btn btn-sm btn-outline-light">Düzenle</button>
-                <button class="btn btn-sm btn-outline-danger">Sil</button>
+                <button class="site-btn-secondary btn-sm">Düzenle</button>
+                <button class="site-btn-secondary btn-sm">Sil</button>
               </td>
             </tr>
           </tbody>
@@ -422,7 +417,12 @@
           </div>
         </div>
 
-        <button type="submit" class="site-btn-secondary mt-3">Duyuruyu Kaydet</button>
+        <button type="submit" class="site-btn-secondary">Duyuruyu Kaydet</button>
+        <button type="reset" class="site-btn-secondary" style="margin-left:10px;">Formu Temizle</button>
+
+        <p class="form-text mt-3">
+          Formu kaydettikten sonra duyuru ve liste yapısını buna göre güncelleyebilirsiniz.
+        </p>
       </form>
     </div>
 
@@ -464,6 +464,14 @@
 <script src="js/jquery.sticky-sidebar.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+  // Admin duyuru formu: basit kayıt bildirimi
+  document.getElementById("adminDuyuruForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Değişiklikler kaydedildi.");
+  });
+</script>
 
 </body>
 </html>
