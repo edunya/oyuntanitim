@@ -10,19 +10,39 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
 
   <style>
-  .blog-thumb {
-    width: 100%;
-    height: 250px !important;
-    background-size: contain !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    display: block;
-  }
+    .blog-thumb {
+      width: 100%;
+      height: 250px !important;
+      background-size: contain !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      display: block;
+    }
 
-  .blog-item {
-    overflow: hidden;
-  }
+    .blog-item {
+      overflow: hidden;
+    }
+
+    /* Oyun Duyuruları & Ödüller başlığının mobilde üst görselden taşmasını engelle */
+    @media (max-width: 767.98px) {
+      .page-top-section {
+        /* Sabit yükseklik yerine içeriğe göre uzasın */
+        height: auto;
+        padding-top: 150px;
+        padding-bottom: 60px;
+      }
+
+      .page-top-section .page-info h2 {
+        font-size: 26px;
+        line-height: 1.3;
+      }
+
+      .page-top-section .site-breadcrumb {
+        font-size: 13px;
+      }
+    }
   </style>
+
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
