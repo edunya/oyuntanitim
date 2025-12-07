@@ -9,7 +9,6 @@
   <link href="img/favicon.ico" rel="shortcut icon"/>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" href="css/font-awesome.min.css"/>
   <link rel="stylesheet" href="css/slicknav.min.css"/>
@@ -19,6 +18,24 @@
   <link rel="stylesheet" href="css/style.css"/>
 
   <style>
+    body.admin-page {
+      background: #501755;
+      background: -webkit-linear-gradient(45deg, #501755 0%, #2d1854 100%);
+      background: -o-linear-gradient(45deg, #501755 0%, #2d1854 100%);
+      background: linear-gradient(45deg, #501755 0%, #2d1854 100%);
+      color: #f5f5ff;
+    }
+
+    body.admin-page .page-section.spad {
+      background: transparent;
+      color: #f5f5ff;
+    }
+
+    body.admin-page .page-top-section h2,
+    body.admin-page .page-top-section p {
+      color: #ffffff;
+    }
+
     .admin-badge {
       display: inline-block;
       padding: 4px 10px;
@@ -29,64 +46,68 @@
       font-weight: 600;
       margin-left: 10px;
     }
+
     .admin-card {
       background: #0d0d23;
       border-radius: 10px;
       padding: 25px;
       margin-bottom: 30px;
-      border: 1px solid rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
     }
+
     .admin-card h3 {
       font-size: 20px;
       margin-bottom: 10px;
+      color: #ffffff;
     }
-    .admin-card small {
-      color: #aaa;
-    }
+
+    .admin-card small,
     .form-text {
-      color: #aaa;
+      color: #d0cffa;
       font-size: 13px;
     }
+
     .table-dark-custom {
       background: #161632;
-      color: #fff;
+      color: #ffffff;
     }
+
     .table-dark-custom thead {
       background: #1f1f3f;
     }
+
     .table-dark-custom tbody tr:nth-child(even) {
       background: #13132b;
     }
-    .site-btn-secondary {
-      background: #444;
-      border: none;
-      color: #fff;
-      font-size: 14px;
-      padding: 8px 15px;
-      border-radius: 30px;
-      text-transform: uppercase;
-      font-weight: 500;
-      letter-spacing: 1px;
-      display: inline-block;
+
+    .badge-pc {
+      background-color: #007bff;
     }
-    .site-btn-secondary:hover {
-      opacity: 0.9;
-      color: #fff;
-      text-decoration: none;
+    .badge-console {
+      background-color: #6f42c1;
     }
-    .badge-active {
+    .badge-coop {
       background-color: #28a745;
     }
-    .badge-passive {
-      background-color: #6c757d;
+
+    body.admin-page .form-control {
+      background: #161632;
+      border-color: #343467;
+      color: #f5f5ff;
     }
-    .badge-slider {
-      background-color: #17a2b8;
+
+    body.admin-page .form-control::placeholder {
+      color: #9e9ed0;
+    }
+
+    body.admin-page label {
+      color: #f5f5ff;
+      font-weight: 500;
     }
   </style>
 </head>
 
-<body>
+<body class="admin-page">
 
 <div id="preloder"><div class="loader"></div></div>
 
@@ -102,42 +123,44 @@
       <a href="#"><i class="fa fa-youtube"></i></a>
     </div>
 
-    <div class="header-bar-warp d-flex">
-      <a href="index.html" class="site-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
+    <div class="header-bar-warp d-flex" style="padding:10px;">
+      <a href="index.html" class="site-logo">
+        <img src="img/logo.png" alt="OyunTanıtım" style="padding:10px;">
+      </a>
 
       <nav class="top-nav-area w-100">
         <ul class="main-menu primary-menu">
           <li><a href="index.html">Ana Sayfa</a></li>
 
-          <li class="active">
+          <li>
             <a href="#">Oyunlar</a>
             <ul class="sub-menu">
               <li><a href="games.html">Tüm Oyunlar</a></li>
-              <li><a href="kategori-aksiyon.html">Aksiyon</a></li>
-              <li><a href="kategori-macera.html">Macera</a></li>
-              <li><a href="kategori-kooperatif.html">Kooperatif</a></li>
-              <li><a href="kategori-fps.html">FPS</a></li>
-              <li><a href="kategori-rpg.html">RPG</a></li>
+              <li><a href="oyunlar-coop.html">Co-op Oyun Önerileri</a></li>
+              <li><a href="oyunlar-editor.html">Editörün Seçimi</a></li>
             </ul>
           </li>
 
           <li><a href="duyurular.html">Duyurular</a></li>
           <li><a href="istatistikler.html">İstatistikler</a></li>
-          <li>
-          <a href="#">Hakkımızda</a>
-          <ul class="sub-menu">
-            <li><a href="hakkinda.html">Hakkımızda</a></li>
-            <li><a href="misyon-vizyon.html">Misyon &amp; Vizyon</a></li>
-          </ul>
-          </li>
-          <li><a href="contact.html">İletişim</a></li>
 
-          <!-- Admin menü grubu -->
           <li>
+            <a href="#">Hakkımızda</a>
+            <ul class="sub-menu">
+              <li><a href="hakkinda.html">Hakkımızda</a></li>
+              <li><a href="misyon-vizyon.html">Misyon &amp; Vizyon</a></li>
+            </ul>
+          </li>
+
+          <li><a href="iletisim.html">İletişim</a></li>
+
+          <!-- Yönetim menü grubu -->
+          <li class="active">
             <a href="#">Yönetim</a>
             <ul class="sub-menu">
               <li><a href="admin-duyurular.html">Duyuru Yönetimi</a></li>
               <li><a href="admin-oyunlar.html">Oyun Yönetimi</a></li>
+              <li><a href="admin-birimler.html">Birim Yönetimi</a></li>
             </ul>
           </li>
         </ul>
@@ -151,7 +174,7 @@
 <section class="page-top-section set-bg" data-setbg="img/page-top-bg/2.jpg">
   <div class="container">
     <h2>Oyun Yönetimi <span class="admin-badge">Admin</span></h2>
-    <p>Sitede listelenen oyunların ekleme, düzenleme ve kategorilendirme arayüzü.</p>
+    <p>Sitede listelenen oyunları, platformları ve etiketleri bu panel üzerinden güncelleyebilirsiniz.</p>
   </div>
 </section>
 
@@ -164,7 +187,7 @@
       <div class="d-flex justify-content-between align-items-center mb-3">
         <div>
           <h3>Mevcut Oyunlar</h3>
-          <small>Tablodaki kayıtlar örnektir.</small>
+          <small>Vitrinde ve kategorilerde yer alan oyunların kısa listesi.</small>
         </div>
         <a href="#yeniOyunFormu" class="site-btn-secondary">Yeni Oyun Ekle</a>
       </div>
@@ -175,91 +198,72 @@
             <tr>
               <th>#</th>
               <th>Oyun Adı</th>
-              <th>Kategori</th>
+              <th>Tür</th>
               <th>Platform</th>
-              <th>Fiyat Aralığı</th>
-              <th>Metacritic</th>
+              <th>Çıkış Yılı</th>
               <th>Durum</th>
               <th>İşlemler</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>5</td>
-              <td>Helldivers II</td>
-              <td>Kooperatif / FPS</td>
-              <td>PC, PS5</td>
-              <td>₺900 - ₺1.200</td>
-              <td>82</td>
+              <td>1</td>
+              <td>Elden Ring: Shadow of the Erdtree</td>
+              <td>RPG / Aksiyon</td>
+              <td><span class="badge badge-pc">PC</span></td>
+              <td>2024</td>
+              <td>Aktif</td>
               <td>
-                <span class="badge badge-active">Aktif</span>
-                <span class="badge badge-slider">Slider</span>
+                <button class="btn btn-sm btn-outline-light">Düzenle</button>
+                <button class="btn btn-sm btn-outline-danger">Sil</button>
               </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Helldivers II</td>
+              <td>Co-op / Shooter</td>
+              <td><span class="badge badge-pc">PC</span> <span class="badge badge-console">PS5</span></td>
+              <td>2024</td>
+              <td>Aktif</td>
               <td>
-                <button class="site-btn-secondary btn-sm">Düzenle</button>
-                <button class="site-btn-secondary btn-sm">Sil</button>
+                <button class="btn btn-sm btn-outline-light">Düzenle</button>
+                <button class="btn btn-sm btn-outline-danger">Sil</button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>It Takes Two</td>
+              <td>Co-op / Macera</td>
+              <td><span class="badge badge-pc">PC</span> <span class="badge badge-console">Konsol</span></td>
+              <td>2021</td>
+              <td>Aktif</td>
+              <td>
+                <button class="btn btn-sm btn-outline-light">Düzenle</button>
+                <button class="btn btn-sm btn-outline-danger">Sil</button>
               </td>
             </tr>
             <tr>
               <td>4</td>
               <td>Hades II</td>
-              <td>Roguelike / Aksiyon</td>
-              <td>PC</td>
-              <td>₺600 - ₺800</td>
-              <td>90</td>
+              <td>Roguelike</td>
+              <td><span class="badge badge-pc">PC</span></td>
+              <td>2025</td>
+              <td>Taslak</td>
               <td>
-                <span class="badge badge-active">Aktif</span>
-              </td>
-              <td>
-                <button class="site-btn-secondary btn-sm">Düzenle</button>
-                <button class="site-btn-secondary btn-sm">Sil</button>
+                <button class="btn btn-sm btn-outline-light">Düzenle</button>
+                <button class="btn btn-sm btn-outline-danger">Sil</button>
               </td>
             </tr>
             <tr>
-              <td>3</td>
+              <td>5</td>
               <td>Split Fiction</td>
-              <td>Bağımsız / Macera</td>
-              <td>PC</td>
-              <td>₺300 - ₺450</td>
-              <td>–</td>
+              <td>Bağımsız</td>
+              <td><span class="badge badge-pc">PC</span></td>
+              <td>2025</td>
+              <td>Planlandı</td>
               <td>
-                <span class="badge badge-active">Aktif</span>
-              </td>
-              <td>
-                <button class="site-btn-secondary btn-sm">Düzenle</button>
-                <button class="site-btn-secondary btn-sm">Sil</button>
-              </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>It Takes Two</td>
-              <td>Kooperatif / Macera</td>
-              <td>PC, PS, Xbox</td>
-              <td>₺700 - ₺1.000</td>
-              <td>89</td>
-              <td>
-                <span class="badge badge-active">Aktif</span>
-                <span class="badge badge-slider">Slider</span>
-              </td>
-              <td>
-                <button class="site-btn-secondary btn-sm">Düzenle</button>
-                <button class="site-btn-secondary btn-sm">Sil</button>
-              </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Elden Ring</td>
-              <td>RPG / Aksiyon</td>
-              <td>PC, PS, Xbox</td>
-              <td>₺1.000 - ₺1.400</td>
-              <td>96</td>
-              <td>
-                <span class="badge badge-active">Aktif</span>
-                <span class="badge badge-slider">Slider</span>
-              </td>
-              <td>
-                <button class="site-btn-secondary btn-sm">Düzenle</button>
-                <button class="site-btn-secondary btn-sm">Sil</button>
+                <button class="btn btn-sm btn-outline-light">Düzenle</button>
+                <button class="btn btn-sm btn-outline-danger">Sil</button>
               </td>
             </tr>
           </tbody>
@@ -267,144 +271,104 @@
       </div>
     </div>
 
-    <!-- Yeni Oyun Ekle -->
+    <!-- Yeni Oyun Formu -->
     <div class="admin-card" id="yeniOyunFormu">
       <h3>Yeni Oyun Ekle</h3>
-      <small>Form, oyun ekleme mantığını göstermek içindir.</small>
-      <hr>
+      <small>Sitede listelenecek yeni bir oyunu buradan ekleyebilirsiniz.</small>
 
-      <form id="adminOyunForm">
+      <form id="adminOyunForm" class="mt-4" action="#" method="post">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="oyunAdi">Oyun Adı</label>
-            <input type="text" class="form-control" id="oyunAdi" placeholder="Örn: Oyun Adı">
+            <input type="text" class="form-control" id="oyunAdi"
+                   placeholder="Örn: Elden Ring: Shadow of the Erdtree">
           </div>
           <div class="form-group col-md-3">
-            <label for="oyunKategori">Kategori</label>
-            <select id="oyunKategori" class="form-control">
-              <option selected>Seçiniz...</option>
-              <option>Aksiyon</option>
-              <option>Macera</option>
-              <option>Kooperatif</option>
-              <option>FPS</option>
-              <option>RPG</option>
-              <option>Bağımsız</option>
-              <option>Diğer</option>
-            </select>
+            <label for="oyunTur">Tür</label>
+            <input type="text" class="form-control" id="oyunTur"
+                   placeholder="Örn: Aksiyon-RPG">
           </div>
           <div class="form-group col-md-3">
-            <label for="oyunDurum">Durum</label>
-            <select id="oyunDurum" class="form-control">
-              <option>Aktif</option>
-              <option>Pasif</option>
-              <option>Yayına Hazırlanıyor</option>
-            </select>
+            <label for="cikisYili">Çıkış Yılı</label>
+            <input type="number" class="form-control" id="cikisYili" min="1980" max="2100" value="2025">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-4">
-            <label for="oyunPlatform">Platform(lar)</label>
-            <input type="text" class="form-control" id="oyunPlatform"
+            <label for="platformlar">Platformlar</label>
+            <input type="text" class="form-control" id="platformlar"
                    placeholder="Örn: PC, PS5, Xbox Series">
             <small class="form-text">
-              Virgülle ayırarak birden fazla platform girebilirsin.
+              Virgülle ayırarak birden fazla platform girebilirsiniz.
             </small>
           </div>
           <div class="form-group col-md-4">
-            <label for="oyunFiyat">Fiyat Aralığı</label>
-            <input type="text" class="form-control" id="oyunFiyat"
-                   placeholder="Örn: ₺700 - ₺1.000">
-          </div>
-          <div class="form-group col-md-4">
-            <label for="oyunCikisTarihi">Çıkış Tarihi</label>
-            <input type="date" class="form-control" id="oyunCikisTarihi">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group col-md-4">
-            <label for="metacriticPuan">Metacritic Puanı (opsiyonel)</label>
-            <input type="number" min="0" max="100" class="form-control" id="metacriticPuan"
-                   placeholder="Örn: 88">
-          </div>
-          <div class="form-group col-md-4">
-            <label for="oyunSlug">Oyun Sayfa Adresi (Slug)</label>
-            <input type="text" class="form-control" id="oyunSlug"
-                   placeholder="Örn: game-yeni-oyun.html">
-            <small class="form-text">
-              Detay sayfasının dosya adı. Örn: <b>game-eldenring.html</b> gibi.
-            </small>
-          </div>
-          <div class="form-group col-md-4">
-            <label for="oyunEtiketler">Etiketler (opsiyonel)</label>
+            <label for="oyunEtiketler">Etiketler</label>
             <input type="text" class="form-control" id="oyunEtiketler"
                    placeholder="Örn: soulslike, co-op, indie">
             <small class="form-text">
-              İleride filtreleme veya arama için etiketler kullanılabilir.
+              Filtreleme için etiketler: co-op, tek oyunculu, hikaye odaklı vb.
             </small>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="oyunDurum">Durum</label>
+            <select id="oyunDurum" class="form-control">
+              <option>Aktif</option>
+              <option>Taslak</option>
+              <option>Planlandı</option>
+            </select>
           </div>
         </div>
 
         <div class="form-group">
-          <label for="kisaAciklama">Kısa Açıklama</label>
-          <textarea id="kisaAciklama" class="form-control" rows="2"
-            placeholder="Oyun listesinde ve kartlarında gösterilecek kısa tanım..."></textarea>
+          <label for="kisaTanitim">Kısa Tanıtım Metni</label>
+          <textarea id="kisaTanitim" class="form-control" rows="3"
+            placeholder="Oyun sayfasında görünecek kısa açıklama..."></textarea>
         </div>
 
         <div class="form-group">
-          <label for="detayAciklama">Detaylı Açıklama / Oynanış Özeti</label>
-          <textarea id="detayAciklama" class="form-control" rows="5"
-            placeholder="Oyun detay sayfasında gösterilecek daha uzun oynanış ve özellik açıklaması..."></textarea>
+          <label for="kapakUrl">Kapak Görseli (URL)</label>
+          <input type="text" class="form-control" id="kapakUrl"
+                 placeholder="Örn: img/games/elden-ring-shadow.jpg">
+          <small class="form-text">
+            Games sayfasındaki kartlarda kullanılacak kapak görseli yolu.
+          </small>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="kapakGorsel">Kapak Görseli (URL)</label>
-            <input type="text" class="form-control" id="kapakGorsel"
-                   placeholder="Örn: img/games/yeni-oyun-kapak.jpg">
-            <small class="form-text">
-              Oyun kartlarında ve detay sayfasında kapak görseli olarak kullanılacak resim adresi.
-            </small>
+            <label for="steamLink">Steam / Mağaza Linki</label>
+            <input type="text" class="form-control" id="steamLink"
+                   placeholder="Örn: https://store.steampowered.com/...">
           </div>
           <div class="form-group col-md-6">
-            <label for="fragmanLinki">Fragman / Tanıtım Videosu (YouTube URL)</label>
-            <input type="text" class="form-control" id="fragmanLinki"
+            <label for="videoLink">Fragman / Video Linki</label>
+            <input type="text" class="form-control" id="videoLink"
                    placeholder="Örn: https://www.youtube.com/watch?v=...">
-            <small class="form-text">
-              Oyun detay sayfasında gömülü video olarak kullanılabilecek bağlantı.
-            </small>
           </div>
         </div>
 
-        <div class="form-group">
-          <label>Gösterim Seçenekleri</label>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="listedeGoster" checked>
-            <label class="form-check-label" for="listedeGoster">
-              Oyun listesinde (games.html) göster
-            </label>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="vitrindeGoster">
+              <label class="form-check-label" for="vitrindeGoster">
+                Ana sayfa slider’ında göster
+              </label>
+            </div>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="sliderdaGoster">
-            <label class="form-check-label" for="sliderdaGoster">
-              Ana sayfa slider alanında göster
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="oneCikanOyun">
-            <label class="form-check-label" for="oneCikanOyun">
-              Öne çıkan oyunlar bölümünde vurgula
-            </label>
+          <div class="form-group col-md-6">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="onerilenOyun">
+              <label class="form-check-label" for="onerilenOyun">
+                Editörün Seçimi alanına ekle
+              </label>
+            </div>
           </div>
         </div>
 
-        <button type="submit" class="site-btn">Oyunu Kaydet</button>
-        <button type="reset" class="site-btn site-btn-secondary" style="margin-left:10px;">Formu Temizle</button>
-
-        <p class="form-text mt-3">
-          Not: Bu panelde yalnızca form ve tablo tasarımı yapılmıştır.
-        </p>
+        <button type="submit" class="site-btn-secondary mt-3">Oyunu Kaydet</button>
       </form>
     </div>
 
@@ -414,7 +378,6 @@
 <!-- Footer -->
 <footer class="footer-section">
   <div class="container">
-
     <a href="index.html" class="footer-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
 
     <ul class="main-menu footer-menu">
@@ -422,8 +385,8 @@
       <li><a href="games.html">Oyunlar</a></li>
       <li><a href="duyurular.html">Duyurular</a></li>
       <li><a href="istatistikler.html">İstatistikler</a></li>
-      <li><a href="about.html">Hakkımızda</a></li>
-      <li><a href="contact.html">İletişim</a></li>
+      <li><a href="hakkinda.html">Hakkımızda</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
     </ul>
 
     <div class="footer-social d-flex justify-content-center">
@@ -447,14 +410,6 @@
 <script src="js/jquery.sticky-sidebar.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/main.js"></script>
-
-<script>
-  // Admin oyun formu: demo uyarısı
-  document.getElementById("adminOyunForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    alert("Bu yönetim paneli eğitim amaçlıdır.\\n\\nForm verileri sunucuya kaydedilmemektedir.");
-  });
-</script>
 
 </body>
 </html>
