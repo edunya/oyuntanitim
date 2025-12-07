@@ -21,6 +21,23 @@
   <link rel="stylesheet" href="css/magnific-popup.css"/>
   <link rel="stylesheet" href="css/animate.css"/>
   <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- Bu sayfadaki koyu arkaplan üzerinde başlıkları açtım -->
+  <style>
+    .games-section h1,
+    .games-section h2,
+    .games-section h3,
+    .games-section h4,
+    .games-section h5,
+    .games-section h6 {
+      color: #f5f5ff;
+    }
+
+    /* Bölüm başlığındaki açıklama yazısı da açık renkli yaptım */
+    .games-section .section-title p {
+      color: #e0defa;
+    }
+  </style>
 </head>
 <body>
 
@@ -46,10 +63,9 @@
 
         <nav class="top-nav-area w-100">
           <ul class="main-menu primary-menu">
-
             <li><a href="index.html">Ana Sayfa</a></li>
 
-            <!-- Oyunlar Dropdown -->
+            <!-- Oyunlar + Kategoriler -->
             <li>
               <a href="#">Oyunlar</a>
               <ul class="sub-menu">
@@ -69,7 +85,6 @@
               </ul>
             </li>
             <li><a href="iletisim.html">İletişim</a></li>
-
           </ul>
         </nav>
       </div>
@@ -89,14 +104,13 @@
   </section>
 
   <!-- İÇERİK -->
-  <!-- games-section: mor/lacivert arkaplan + açık renk metin -->
   <section class="games-section spad">
     <div class="container">
 
       <!-- BAŞLIK BLOĞU -->
       <div class="section-title text-center mb-4">
         <h2>Beraber Oynaması En Keyifli Co-op Oyunlar</h2>
-        <p class="text-secondary" style="max-width:720px;margin:10px auto 0;">
+        <p style="max-width:720px;margin:10px auto 0;">
           Aynı koltukta yan yana ya da çevrim içi olarak arkadaşlarınla oynayabileceğin, iş birliğini
           ödüllendiren oyunları bu sayfada topluyoruz. Aşağıdaki öneriler, OyunTanıtım ekibinin
           hem oynanış deneyimine hem de topluluk geri bildirimlerine göre seçildi.
@@ -264,9 +278,27 @@
   <!-- FOOTER -->
   <footer class="footer-section">
     <div class="container">
-      <p style="color:#ccc;margin:0;padding:20px 0;font-size:13px;">
-        © 2025 OyunTanıtım – Oyun inceleme ve öneri platformu.
-      </p>
+      <a href="index.html" class="footer-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
+
+      <ul class="main-menu footer-menu">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="games.html">Oyunlar</a></li>
+        <li><a href="duyurular.html">Duyurular</a></li>
+        <li><a href="istatistikler.html">İstatistikler</a></li>
+        <li><a href="hakkinda.html">Hakkımızda</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+
+      <div class="footer-social d-flex justify-content-center">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+
+      <div class="copyright">
+        © 2025 OyunTanıtım
+      </div>
     </div>
   </footer>
 
@@ -275,8 +307,9 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.slicknav.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.sticky-sidebar.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/circle-progress.min.js"></script>
   <script src="js/main.js"></script>
+
 </body>
 </html>
