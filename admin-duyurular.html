@@ -6,7 +6,10 @@
   <meta name="description" content="OyunTanıtım duyuru yönetimi paneli">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Favicon -->
   <link href="img/favicon.ico" rel="shortcut icon"/>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
 
   <!-- CSS -->
@@ -19,6 +22,26 @@
   <link rel="stylesheet" href="css/style.css"/>
 
   <style>
+    /* Admin sayfalar için koyu arkaplan + okunaklı metin */
+    body.admin-page {
+      background: #501755;
+      background: -webkit-linear-gradient(45deg, #501755 0%, #2d1854 100%);
+      background: -o-linear-gradient(45deg, #501755 0%, #2d1854 100%);
+      background: linear-gradient(45deg, #501755 0%, #2d1854 100%);
+      color: #f5f5ff;
+    }
+
+    body.admin-page .page-section.spad {
+      background: transparent;
+      color: #f5f5ff;
+    }
+
+    body.admin-page .page-top-section h2,
+    body.admin-page .page-top-section p {
+      color: #ffffff;
+    }
+
+    /* Admin badge */
     .admin-badge {
       display: inline-block;
       padding: 4px 10px;
@@ -29,37 +52,40 @@
       font-weight: 600;
       margin-left: 10px;
     }
+
     .admin-card {
       background: #0d0d23;
       border-radius: 10px;
       padding: 25px;
       margin-bottom: 30px;
-      border: 1px solid rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
     }
+
     .admin-card h3 {
       font-size: 20px;
       margin-bottom: 10px;
+      color: #ffffff;
     }
-    .admin-card small {
-      color: #aaa;
-    }
+
+    .admin-card small,
     .form-text {
-      color: #aaa;
+      color: #d0cffa;
       font-size: 13px;
     }
-    .table thead th {
-      border-top: none;
-    }
+
     .table-dark-custom {
       background: #161632;
-      color: #fff;
+      color: #ffffff;
     }
+
     .table-dark-custom thead {
       background: #1f1f3f;
     }
+
     .table-dark-custom tbody tr:nth-child(even) {
       background: #13132b;
     }
+
     .badge-draft {
       background-color: #6c757d;
     }
@@ -69,6 +95,7 @@
     .badge-planned {
       background-color: #17a2b8;
     }
+
     .site-btn-secondary {
       background: #444;
       border: none;
@@ -81,15 +108,32 @@
       letter-spacing: 1px;
       display: inline-block;
     }
+
     .site-btn-secondary:hover {
       opacity: 0.9;
       color: #fff;
       text-decoration: none;
     }
+
+    /* Form alanları koyu tema */
+    body.admin-page .form-control {
+      background: #161632;
+      border-color: #343467;
+      color: #f5f5ff;
+    }
+
+    body.admin-page .form-control::placeholder {
+      color: #9e9ed0;
+    }
+
+    body.admin-page label {
+      color: #f5f5ff;
+      font-weight: 500;
+    }
   </style>
 </head>
 
-<body>
+<body class="admin-page">
 
 <div id="preloder"><div class="loader"></div></div>
 
@@ -105,38 +149,47 @@
       <a href="#"><i class="fa fa-youtube"></i></a>
     </div>
 
-    <div class="header-bar-warp d-flex">
-      <a href="index.html" class="site-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
+    <div class="header-bar-warp d-flex" style="padding:10px;">
+      <a href="index.html" class="site-logo">
+        <img src="img/logo.png" alt="OyunTanıtım" style="padding:10px;">
+      </a>
 
       <nav class="top-nav-area w-100">
         <ul class="main-menu primary-menu">
           <li><a href="index.html">Ana Sayfa</a></li>
 
+          <!-- Oyunlar -->
           <li>
             <a href="#">Oyunlar</a>
             <ul class="sub-menu">
               <li><a href="games.html">Tüm Oyunlar</a></li>
-              <li><a href="kategori-aksiyon.html">Aksiyon</a></li>
-              <li><a href="kategori-macera.html">Macera</a></li>
-              <li><a href="kategori-kooperatif.html">Kooperatif</a></li>
-              <li><a href="kategori-fps.html">FPS</a></li>
-              <li><a href="kategori-rpg.html">RPG</a></li>
+              <li><a href="oyunlar-coop.html">Co-op Oyun Önerileri</a></li>
+              <li><a href="oyunlar-editor.html">Editörün Seçimi</a></li>
             </ul>
           </li>
 
           <li><a href="duyurular.html">Duyurular</a></li>
           <li><a href="istatistikler.html">İstatistikler</a></li>
-          <li>
-          <a href="#">Hakkımızda</a>
-          <ul class="sub-menu">
-            <li><a href="hakkinda.html">Hakkımızda</a></li>
-            <li><a href="misyon-vizyon.html">Misyon &amp; Vizyon</a></li>
-          </ul>
-          </li>
-          <li><a href="contact.html">İletişim</a></li>
 
-          <!-- Admin link -->
-          <li class="active"><a href="admin-duyurular.html">Yönetim Paneli</a></li>
+          <li>
+            <a href="#">Hakkımızda</a>
+            <ul class="sub-menu">
+              <li><a href="hakkinda.html">Hakkımızda</a></li>
+              <li><a href="misyon-vizyon.html">Misyon &amp; Vizyon</a></li>
+            </ul>
+          </li>
+
+          <li><a href="iletisim.html">İletişim</a></li>
+
+          <!-- Yönetim menü grubu -->
+          <li class="active">
+            <a href="#">Yönetim</a>
+            <ul class="sub-menu">
+              <li><a href="admin-duyurular.html">Duyuru Yönetimi</a></li>
+              <li><a href="admin-oyunlar.html">Oyun Yönetimi</a></li>
+              <li><a href="admin-birimler.html">Birim Yönetimi</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
 
@@ -148,7 +201,7 @@
 <section class="page-top-section set-bg" data-setbg="img/page-top-bg/1.jpg">
   <div class="container">
     <h2>Duyuru Yönetimi <span class="admin-badge">Admin</span></h2>
-    <p>Bu sayfa, duyuru yönetim arayüzüdür.</p>
+    <p>Oyunlara ait haberleri, etkinlikleri ve kampanyaları buradan yönetebilirsiniz.</p>
   </div>
 </section>
 
@@ -161,7 +214,7 @@
       <div class="d-flex justify-content-between align-items-center mb-3">
         <div>
           <h3>Mevcut Duyurular</h3>
-          <small>Bu tablo <b>örnek veri</b> içermektedir.</small>
+          <small>Yayında olan ve planlanan duyuruların kısa listesi.</small>
         </div>
         <a href="#yeniDuyuruFormu" class="site-btn-secondary">Yeni Duyuru Ekle</a>
       </div>
@@ -173,7 +226,7 @@
               <th>#</th>
               <th>Başlık</th>
               <th>Kategori</th>
-              <th>İlgili Oyun</th>
+              <th>İlgili Oyun</hth>
               <th>Yayın Tarihi</th>
               <th>Durum</th>
               <th>İşlemler</th>
@@ -182,62 +235,62 @@
           <tbody>
             <tr>
               <td>5</td>
-              <td>Helldivers II Co-op Hafta Sonu Etkinliği</td>
-              <td>Etkinlik</td>
-              <td>Helldivers II</td>
-              <td>2025-11-30</td>
+              <td>BAFTA 2025: Astro Bot &amp; Helldivers II Ödülleri</td>
+              <td>Ödül</td>
+              <td>Astro Bot / Helldivers II</td>
+              <td>08.04.2025</td>
               <td><span class="badge badge-live">Yayında</span></td>
               <td>
-                <button class="site-btn-secondary btn-sm">Düzenle</button>
-                <button class="site-btn-secondary btn-sm">Sil</button>
+                <button class="btn btn-sm btn-outline-light">Düzenle</button>
+                <button class="btn btn-sm btn-outline-danger">Sil</button>
               </td>
             </tr>
             <tr>
               <td>4</td>
-              <td>Sayılarla Oyun Dünyası İstatistikleri Yayında</td>
-              <td>Genel</td>
-              <td>-</td>
-              <td>2025-11-28</td>
+              <td>Elden Ring: Shadow of the Erdtree Rehberi</td>
+              <td>Rehber</td>
+              <td>Elden Ring</td>
+              <td>21.06.2025</td>
               <td><span class="badge badge-live">Yayında</span></td>
               <td>
-                <button class="site-btn-secondary btn-sm">Düzenle</button>
-                <button class="site-btn-secondary btn-sm">Sil</button>
+                <button class="btn btn-sm btn-outline-light">Düzenle</button>
+                <button class="btn btn-sm btn-outline-danger">Sil</button>
               </td>
             </tr>
             <tr>
               <td>3</td>
-              <td>Elden Ring Rehber Yazı Serisi Yolda</td>
-              <td>Duyuru</td>
-              <td>Elden Ring</td>
-              <td>2025-11-20</td>
+              <td>Helldivers II Co-op Hafta Sonu Etkinliği</td>
+              <td>Etkinlik</td>
+              <td>Helldivers II</td>
+              <td>15.03.2025</td>
               <td><span class="badge badge-planned">Planlandı</span></td>
               <td>
-                <button class="site-btn-secondary btn-sm">Düzenle</button>
-                <button class="site-btn-secondary btn-sm">Sil</button>
+                <button class="btn btn-sm btn-outline-light">Düzenle</button>
+                <button class="btn btn-sm btn-outline-danger">Sil</button>
               </td>
             </tr>
             <tr>
               <td>2</td>
-              <td>Bakım Çalışması: Sunucu Performans Güncellemesi</td>
-              <td>Bakım</td>
-              <td>-</td>
-              <td>2025-11-10</td>
+              <td>Split Fiction Çıkış Tarihi Güncellendi</td>
+              <td>Güncelleme</td>
+              <td>Split Fiction</td>
+              <td>01.02.2025</td>
               <td><span class="badge badge-draft">Taslak</span></td>
               <td>
-                <button class="site-btn-secondary btn-sm">Düzenle</button>
-                <button class="site-btn-secondary btn-sm">Sil</button>
+                <button class="btn btn-sm btn-outline-light">Düzenle</button>
+                <button class="btn btn-sm btn-outline-danger">Sil</button>
               </td>
             </tr>
             <tr>
               <td>1</td>
-              <td>OyunTanıtım Yayında!</td>
-              <td>Genel</td>
-              <td>-</td>
-              <td>2025-11-01</td>
+              <td>Hades II Erken Erişim Bilgileri</td>
+              <td>Duyuru</td>
+              <td>Hades II</td>
+              <td>10.01.2025</td>
               <td><span class="badge badge-live">Yayında</span></td>
               <td>
-                <button class="site-btn-secondary btn-sm">Düzenle</button>
-                <button class="site-btn-secondary btn-sm">Sil</button>
+                <button class="btn btn-sm btn-outline-light">Düzenle</button>
+                <button class="btn btn-sm btn-outline-danger">Sil</button>
               </td>
             </tr>
           </tbody>
@@ -245,28 +298,26 @@
       </div>
     </div>
 
-    <!-- Yeni Duyuru Ekle -->
+    <!-- Yeni Duyuru Formu -->
     <div class="admin-card" id="yeniDuyuruFormu">
-      <h3>Yeni Duyuru Ekle</h3>
-      <small>Form alanları, duyuru ekleme mantığını göstermek içindir. Gerçek veri kaydı yapılmamaktadır.</small>
-      <hr>
+      <h3>Yeni Duyuru Oluştur</h3>
+      <small>Yeni bir haber, etkinlik ya da kampanya duyurusunu buradan ekleyebilirsiniz.</small>
 
-      <form id="adminDuyuruForm">
+      <form id="adminDuyuruForm" class="mt-4" action="#" method="post">
         <div class="form-row">
           <div class="form-group col-md-8">
             <label for="duyuruBaslik">Duyuru Başlığı</label>
-            <input type="text" class="form-control" id="duyuruBaslik" placeholder="Örn: It Takes Two Co-op İndirimi Başladı">
+            <input type="text" class="form-control" id="duyuruBaslik"
+                   placeholder="Örn: BAFTA Games Awards 2025 Kazananları">
           </div>
           <div class="form-group col-md-4">
             <label for="duyuruKategori">Kategori</label>
             <select id="duyuruKategori" class="form-control">
-              <option selected>Seçiniz...</option>
-              <option>Genel</option>
-              <option>Duyuru</option>
-              <option>Kampanya</option>
+              <option>Genel Duyuru</option>
               <option>Etkinlik</option>
-              <option>Bakım</option>
+              <option>Kampanya</option>
               <option>Güncelleme</option>
+              <option>Ödül / Öne Çıkanlar</option>
             </select>
           </div>
         </div>
@@ -287,7 +338,7 @@
           <div class="form-group col-md-4">
             <label for="ilgiliOyun">İlgili Oyun (opsiyonel)</label>
             <select id="ilgiliOyun" class="form-control">
-              <option selected>Seçiniz...</option>
+              <option selected>Seçiniz.</option>
               <option>Elden Ring</option>
               <option>It Takes Two</option>
               <option>Helldivers II</option>
@@ -301,9 +352,9 @@
         <div class="form-group">
           <label for="kisaOzet">Kısa Özet</label>
           <textarea id="kisaOzet" class="form-control" rows="2"
-            placeholder="Ana sayfadaki duyuru kartında gösterilecek kısa açıklama..."></textarea>
+            placeholder="Ana sayfadaki duyuru kartında görünecek kısa açıklama..."></textarea>
           <small class="form-text">
-            Ana sayfadaki kısa açıklama için kullanılır.
+            Kısa özet; duyurular listesinde ve ana sayfadaki kartlarda kullanılabilir.
           </small>
         </div>
 
@@ -312,7 +363,7 @@
           <textarea id="detayIcerik" class="form-control" rows="5"
             placeholder="Duyurunun detaylı metni, etkinlik saatleri, kampanya şartları vb."></textarea>
           <small class="form-text">
-            Bu alan, duyuru modallarında veya ayrı bir detay sayfasında tam metin olarak gösterilebilir.
+            Tam metin, modal pencerede veya ayrı bir duyuru sayfasında gösterilebilir.
           </small>
         </div>
 
@@ -320,52 +371,58 @@
           <div class="form-group col-md-6">
             <label for="kapakGorsel">Kapak Görseli (URL)</label>
             <input type="text" class="form-control" id="kapakGorsel"
-                   placeholder="Örn: img/duyurular/coop-etkinlik.jpg">
+                   placeholder="Örn: img/duyurular/bafta-2025.jpg">
             <small class="form-text">
-              Ana sayfadaki veya <b>duyurular.html</b> sayfasındaki görsel alanında kullanılacak resim adresi.
+              Duyuru kartında ve detay alanında kullanılacak görselin yolu.
             </small>
           </div>
           <div class="form-group col-md-6">
             <label for="kaynakLink">Kaynak Linki (opsiyonel)</label>
             <input type="text" class="form-control" id="kaynakLink"
-                   placeholder="Örn: https://store.steampowered.com/...">
+                   placeholder="Örn: https://www.bafta.org/">
             <small class="form-text">
-              Haber/duyuru resmi kaynağı. Gerçek dünyadaki site/geliştirici sayfası olabilir.
+              Haber kaynağı veya resmi web sitesi bağlantısı.
             </small>
           </div>
         </div>
 
         <div class="form-group">
-          <label for="ekDosya">Ek Dosya (PDF / Word / Resim)</label>
-          <input type="file" class="form-control-file" id="ekDosya">
+          <label for="ekDosya">Ek Dosya / Açıklama Notu</label>
+          <input type="text" class="form-control" id="ekDosya"
+                 placeholder="Örn: Etkinlik afişi, PDF kurallar dosyası vb.">
           <small class="form-text">
-            Örn: Etkinlik afişi, kampanya şartlarını içeren PDF, resmi duyuru metni (Word) vb.
-            Burada dosya sunucuya yüklenmez; sadece form alanı tasarımı gösterilmektedir.
+            Gerekirse ek doküman ya da kısa notu burada belirtebilirsiniz.
           </small>
         </div>
 
-        <div class="form-group">
-          <label>Yayınlama Seçenekleri</label>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="anaSayfadaGoster" checked>
-            <label class="form-check-label" for="anaSayfadaGoster">
-              Ana sayfadaki “Son Duyurular” alanında göster
-            </label>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="anaSayfadaGoster">
+              <label class="form-check-label" for="anaSayfadaGoster">
+                Ana sayfadaki “Son Duyurular” alanında göster
+              </label>
+            </div>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="istatistiklerdeIsaretle">
-            <label class="form-check-label" for="istatistiklerdeIsaretle">
-              Gerekirse istatistik sayfasında özel bir not/etiket olarak işaretle
-            </label>
+          <div class="form-group col-md-4">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="vitrinOyun">
+              <label class="form-check-label" for="vitrinOyun">
+                İlgili oyunun vitrin kartında öne çıkar
+              </label>
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="bulteneEkle">
+              <label class="form-check-label" for="bulteneEkle">
+                E-posta bültenine ekle
+              </label>
+            </div>
           </div>
         </div>
 
-        <button type="submit" class="site-btn">Duyuruyu Kaydet</button>
-        <button type="reset" class="site-btn site-btn-secondary" style="margin-left:10px;">Formu Temizle</button>
-
-        <p class="form-text mt-3">
-          Bu panelde veriler kaydedilmez.
-        </p>
+        <button type="submit" class="site-btn-secondary mt-3">Duyuruyu Kaydet</button>
       </form>
     </div>
 
@@ -375,7 +432,6 @@
 <!-- Footer -->
 <footer class="footer-section">
   <div class="container">
-
     <a href="index.html" class="footer-logo"><img src="img/logo.png" alt="OyunTanıtım"></a>
 
     <ul class="main-menu footer-menu">
@@ -383,8 +439,8 @@
       <li><a href="games.html">Oyunlar</a></li>
       <li><a href="duyurular.html">Duyurular</a></li>
       <li><a href="istatistikler.html">İstatistikler</a></li>
-      <li><a href="about.html">Hakkımızda</a></li>
-      <li><a href="contact.html">İletişim</a></li>
+      <li><a href="hakkinda.html">Hakkımızda</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
     </ul>
 
     <div class="footer-social d-flex justify-content-center">
@@ -408,14 +464,6 @@
 <script src="js/jquery.sticky-sidebar.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/main.js"></script>
-
-<script>
-  // Admin duyuru formu: demo uyarısı
-  document.getElementById("adminDuyuruForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    alert("Bu yönetim panelinde veriler sunucuya kaydedilmemektedir.");
-  });
-</script>
 
 </body>
 </html>
